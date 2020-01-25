@@ -43,9 +43,8 @@ To fetch all books
 
 $json = json_decode(file_get_contents('https://www.anapioficeandfire.com/api/books'), true);
 
-To Get a specific Book
-
 To get a specific book, an ID is passed to the controller from which an external http request will be made with the specified ID to retrieve a specific record as shown bellow
+
 $json = json_decode(file_get_contents('https://www.anapioficeandfire.com/api/books/'.$id.''), true);
 
 
@@ -59,6 +58,7 @@ This involved addition of two meta data which are "status_code" to the json resu
 First we make a GET request to our api endpoint 'index' in our controller. we then create a resource file named BookCollection which we will use in our BooksController to retrieve all available data in the table books from our database which we have formated its output result as specified in the assessment test.
 
 ##Result
+
 note: laravel-6 dont recognize (null) or (empty) so passing [] inplace of null or empty.
 
  if ($books != '[]' ) { 
