@@ -53,6 +53,7 @@ GET http://localhost:8080/api/external-posts/1
 ##INSTRUCTIONS
 
 Rename file env and editorconfig to .env and .editorconfig
+remember to run composer update command to load the vendor folder.
 
 ##INCLUDES
 
