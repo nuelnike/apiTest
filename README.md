@@ -1,7 +1,9 @@
 ##TOOLS
 
 Xampp
+
 Laravel 6.0
+
 Mysql database
 
 ##CONTROLLERS
@@ -15,11 +17,17 @@ Books.php
 ##API ROUTES
 
 Route::get('/external-books/', 'BookController@externalBooks');
+
 Route::get('/external-books/{id}', 'BookController@getexternalBook');
+
 Route::get('/v1/books', 'BookController@index');
+
 Route::get('/v1/books/{book}', 'BookController@show');
+
 Route::post('/v1/books', 'BookController@create');
+
 Route::patch('/v1/books/{book}', 'BookController@update');
+
 Route::delete('/v1/books/{book}', 'BookController@delete');
 
 ##INCLUDES
@@ -29,8 +37,11 @@ A Mysql database was included for quick setup. It is located in database/rest_ap
 ##CONFIGURATIONS
 
 1. Create a new database with the name rest_api_test.
+
 2. Import/upload the mysql file in database/restful_api_test.SQL
+
 3. Run the php artisan command to start server or launch xampp and start you apache and mysql
+
 4. Test endpoints with specified URL as specified in the assessment test.
 
 ##IMPLEMENTATIONS
