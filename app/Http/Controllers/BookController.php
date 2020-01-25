@@ -56,6 +56,30 @@ class BookController extends Controller
                            ]); 
     }
  
+    
+// Alternative to fire and ice
+
+    public function externalPosts()
+    { 
+    $json = json_decode(file_get_contents('https://jsonplaceholder.typicode.com/posts'), true);
+    return response()->json([ 
+                           "status_code" => "200", 
+                           "status" => "success",  
+                           "data" => $json,  
+                           ]); 
+      
+    }
+
+    public function getexternalPost($id)
+    { 
+    $json = json_decode(file_get_contents('https://jsonplaceholder.typicode.com/posts/'.$id.''), true);
+    return response()->json([ 
+                           "status_code" => "200", 
+                           "status" => "success",  
+                           "data" => $json,  
+                           ]); 
+    }
+
 
     /**
      * Show the form for creating a new resource.
