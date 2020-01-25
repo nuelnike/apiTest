@@ -30,6 +30,27 @@ Route::patch('/v1/books/{book}', 'BookController@update');
 
 Route::delete('/v1/books/{book}', 'BookController@delete');
 
+##Alternative external api if fire and ice is unavailable
+
+Route::get('/external-posts/', 'BookController@externalPosts');
+
+Route::get('/external-posts/{id}', 'BookController@getexternalPosts');
+
+##Test URL
+1. Fire and ice
+
+GET http://localhost:8080/api/external-books/
+
+GET http://localhost:8080/api/external-books/1
+
+1B. Json Placeholder (Alternative if fire and ice fails)
+
+GET http://localhost:8080/api/external-post/
+
+GET http://localhost:8080/api/external-posts/1
+
+
+
 ##INCLUDES
 
 A Mysql database was included for quick setup. It is located in database/rest_api_test.sql
