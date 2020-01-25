@@ -50,6 +50,9 @@ GET http://localhost:8080/api/external-post/
 GET http://localhost:8080/api/external-posts/1
 
 
+##INSTRUCTIONS
+
+Rename file env and editorconfig to .env and .editorconfig
 
 ##INCLUDES
 
