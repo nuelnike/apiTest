@@ -167,7 +167,7 @@ if (Books::where('id', $id)->exists()) {
     { 
  if (Books::where('id', $id)->exists()) { 
 
- DB::update('update books set name = ?, isbn = ?, authors = ?, country = ?, number_of_pages = ?, publisher = ?, release_date = ?,  where id = ?', [$request->name,$request->isbn,$request->authors,$request->country,$request->number_of_pages,$request->publisher,$request->release_date,$id]);  
+ DB::update('update books set name = ?, isbn = ?, authors = ?, country = ?, number_of_pages = ?, publisher = ?, release_date = ? where id = ?', [$request->name,$request->isbn,$request->authors,$request->country,$request->number_of_pages,$request->publisher,$request->release_date,$id]);  
 $ToReturn = array(
                 "id" => $id, 
                 "name" => $request->name,
@@ -201,7 +201,7 @@ return response()->json([
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
     $article = Books::findOrFail($id);
     $article->delete();
